@@ -1,0 +1,24 @@
+/* Custom styles for radio buttons */
+[type='radio']:checked {
+    background-color: #1E86FF;
+    border-color: #1E86FF;
+    appearance: none; /* Remove default styling */
+    width: 1rem; /* Adjust size */
+    height: 1rem; /* Adjust size */
+    border-radius: 50%; /* Make it circular */
+    position: relative;
+    border: 2px solid #1E86FF;
+}
+
+[type='radio']:checked::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 50%;
+    background-color: #1E86FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
